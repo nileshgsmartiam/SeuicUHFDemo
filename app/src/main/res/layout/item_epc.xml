@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <!-- EPC -->
+    <TextView 
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="6"
+       android:id="@+id/tv_epc"
+       />
+    
+      <View 
+             android:layout_width="1dp"
+	    	android:layout_height="fill_parent"
+	    	android:background="#6000"/>
+    
+    <!-- Nums -->
+    <TextView 
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="1.2"
+       android:id="@+id/tv_nums"
+       android:gravity="center"
+       />
+    
+      <View 
+             android:layout_width="1dp"
+	    	android:layout_height="fill_parent"
+	    	android:background="#6000"/>
+    
+    <!-- RSSI -->
+    <TextView 
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.8"
+       android:id="@+id/tv_rssi"
+       android:gravity="center"
+       />
+
+</LinearLayout>

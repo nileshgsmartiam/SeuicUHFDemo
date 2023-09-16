@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/scankey.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/scankey.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

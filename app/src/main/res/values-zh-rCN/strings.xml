@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UHF</string>
+    <string name="action_settings">设置</string>
+    <string name="hide">隐藏</string>
+    <string name="exit">退出</string>
+    <string name="config">配置</string>
+    <string name="inventory">寻卡</string>
+    <string name="once">单次</string>
+    <string name="continues">连续</string> 
+    <string name="stop">停止</string>
+    <string name="read">读数据</string>
+    <string name="write">写数据</string>
+    <string name="clear">清空</string>
+    <string name="powertitle">功率</string>
+    <string name="power_value">功率：</string>
+    <string name="getpower">获取功率</string>
+    <string name="setpower">设置功率</string>
+    <string name="regiontitle">区域</string>
+    <string name="region">区域：</string>
+    <string name="getregion">获取区域</string>
+    <string name="temptitle">温度</string>
+    <string name="gettemp">获取温度</string>
+    <string name="temppro">温度保护</string>
+    <string name="total">总数：</string>
+    <string name="readTagData_faild">读标签数据失败。</string>
+    <string name="readTagData_sucess">读标签数据成功。</string>
+    <string name="please_select_a_tag">请选择一个标签。</string>
+    <string name="the_parameter_cannot_be_empty">参数不能为空。</string>
+    <string name="writeData_cannot_be_empty">写入数据不能为空。</string>
+    <string name="writeTagData_faild">写标签数据失败。</string>
+    <string name="writeTagData_sucess">写标签数据成功。</string>
+    <string name="open_failed">打开失败。</string>
+    <string name="RfidGetTemperature_faild">RFID获取温度失败。</string>
+    <string name="temperature">温度</string>
+    <string name="RfidGetPower_faild">RFID获取功率失败。</string>
+    <string name="power">功率：</string>
+    <string name="RfidSetPower">RFID设置功率：</string>
+    <string name="please_input_power">请输入功率</string>
+    <string name="RfidGetRegion_faild">RFID获取寄存器失败。</string>
+    <string name="fcc">FCC</string>
+    <string name="id_pc_epc">ID(PC+EPC)</string>
+    <string name="nums">数量</string>
+    <string name="rssi">RSSI</string>
+    <string name="bank">Bank</string>
+    <string name="address">地址</string>
+    <string name="lenth">长度</string>
+    <string name="password">密码</string>
+    <string name="dbm">dBm</string>
+    <string name="c">℃</string>
+    <string name="_00000000">00000000</string>
+
+
+</resources>

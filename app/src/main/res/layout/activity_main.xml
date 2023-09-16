@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+     >
+	
+     <TextView 
+            android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#ff363636"
+            />
+     
+    <RadioGroup 
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:orientation="horizontal"
+    	android:background="@drawable/bg_weibo_listab">
+        
+        <RadioButton
+           android:checked="true"
+           android:id="@+id/rb_inventory"  
+           android:layout_width="match_parent"
+    	   android:layout_height="50dp"
+    	   android:layout_weight="1"
+    	   android:gravity="center"
+    	   android:background="@drawable/weibolist_bottombar_itembg_selector"
+    	   android:textColor="#ffffff"
+    	   android:button="@null"
+    	   android:text="@string/inventory"
+    	   android:focusableInTouchMode="true"
+    	   />
+
+        
+        <RadioButton
+           android:id="@+id/rb_settings" 
+           android:layout_width="match_parent"
+    	   android:layout_height="50dp"
+    	   android:layout_weight="1"
+    	   android:gravity="center"
+    	   android:background="@drawable/weibolist_bottombar_itembg_selector"
+    	   android:textColor="#ffffff"
+    	   android:button="@null"
+    	   android:text="@string/config"
+    	   />
+        
+        
+    </RadioGroup>
+    
+     <FrameLayout
+            android:id="@+id/frl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+     
+</LinearLayout>

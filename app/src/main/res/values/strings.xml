@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UHF</string>
+    <string name="action_settings">Settings</string>
+    <string name="hide">Hide</string>
+    <string name="exit">Exit</string>
+    <string name="config">Config</string>
+    <string name="inventory">Inventory</string>
+    <string name="once">Once</string>
+    <string name="continues">Continue</string> 
+    <string name="stop">Stop</string>
+    <string name="read">Read</string>
+    <string name="write">Write</string>
+    <string name="clear">Clear</string>
+    <string name="powertitle">Power</string>
+    <string name="power_value">Power:</string>
+    <string name="getpower">GetPower</string>
+    <string name="setpower">SetPower</string>
+    <string name="regiontitle">Region</string>
+    <string name="region">Region:</string>
+    <string name="getregion">GetRegion</string>
+    <string name="temptitle">Temperature</string>
+    <string name="gettemp">GetTemp</string>
+    <string name="temppro">TempPro</string>
+    <string name="total">Total:</string>
+    <string name="readTagData_faild">ReadTagData faild.</string>
+    <string name="readTagData_sucess">ReadTagData sucess.</string>
+    <string name="please_select_a_tag">plase select a tag.</string>
+    <string name="the_parameter_cannot_be_empty">The parameter cannot be empty.</string>
+    <string name="writeData_cannot_be_empty">WriteData cannot be empty.</string>
+    <string name="writeTagData_faild">WriteTagData faild.</string>
+    <string name="writeTagData_sucess">WriteTagData sucess.</string>
+    <string name="open_failed">Open Filed.</string>
+    <string name="RfidGetTemperature_faild">RfidGetTemperature faild.</string>
+    <string name="temperature">temperature</string>
+    <string name="RfidGetPower_faild">RfidGetPower faild.</string>
+    <string name="power">power:</string>
+    <string name="RfidSetPower">RfidSetPower:</string>
+    <string name="please_input_power">please input power</string>
+    <string name="RfidGetRegion_faild">RfidGetRegion faild.</string>
+    <string name="fcc">FCC</string>
+    <string name="id_pc_epc">ID(PC+EPC)</string>
+    <string name="nums">Nums</string>
+    <string name="rssi">RSSI</string>
+    <string name="bank">Bank</string>
+    <string name="address">Address</string>
+    <string name="lenth">Lenth</string>
+    <string name="password">Password</string>
+    <string name="dbm">dBm</string>
+    <string name="c">℃</string>
+    <string name="_00000000">00000000</string>
+
+
+</resources>
