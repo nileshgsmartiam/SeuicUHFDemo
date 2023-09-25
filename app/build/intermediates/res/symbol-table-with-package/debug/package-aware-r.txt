@@ -810,6 +810,8 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable et
 drawable ic_launcher
+drawable ic_launcher_background
+drawable ic_launcher_foreground
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1096,6 +1098,8 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu main
+mipmap ic_launcher
+mipmap ic_launcher_round
 raw scan
 string RfidGetPower_faild
 string RfidGetRegion_faild
@@ -1572,3 +1576,5 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml backup_rules
+xml data_extraction_rules
