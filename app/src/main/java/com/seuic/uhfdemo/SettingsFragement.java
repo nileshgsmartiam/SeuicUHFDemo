@@ -17,180 +17,175 @@ import android.widget.Toast;
 
 public class SettingsFragement extends Fragment {
 
-	private UHFService mDevice;
+    private static SettingsFragement settingsfragement;
+    View currentView;
+    private UHFService mDevice;
+    private Button btn_readpower;
+    private Button btn_writepower;
+    private Button btn_readregion;
+    private Button btn_readtemp;
+    private EditText et_power;
+    private EditText et_region;
+    private EditText et_temp;
+    private TextView tv_version;
 
-	private Button btn_readpower;
-	private Button btn_writepower;
-	private Button btn_readregion;
-	private Button btn_readtemp;
+    public static SettingsFragement getInstance() {
+        if (settingsfragement == null)
+            settingsfragement = new SettingsFragement();
+        return settingsfragement;
+    }
 
-	private EditText et_power;
-	private EditText et_region;
-	private EditText et_temp;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-	private TextView tv_version;
+        mDevice = UHFService.getInstance(getActivity().getApplication());
+        boolean flag = mDevice.open();
+        View view = initUI(inflater);
 
-	View currentView;
+        // Get the firmware version number
+        GetFirmwareVersion();
+        // Get temperature
+        GetTemperature();
+        // Get power
+        GetPower();
+        // Set region
+        SetRegion();
+        // Get region
+        GetRegion();
 
-	private static SettingsFragement settingsfragement;
+        return view;
+    }
 
-	public static SettingsFragement getInstance() {
-		if (settingsfragement == null)
-			settingsfragement = new SettingsFragement();
-		return settingsfragement;
-	}
+    private View initUI(LayoutInflater inflater) {
+        currentView = inflater.inflate(R.layout.fragment_settings, null);
+        currentView.setFocusable(true);
 
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        et_power = (EditText) currentView.findViewById(R.id.et_power);
+        et_region = (EditText) currentView.findViewById(R.id.et_region);
+        et_temp = (EditText) currentView.findViewById(R.id.et_temperature);
 
-		mDevice = UHFService.getInstance(getActivity().getApplication());
-		boolean flag = mDevice.open();
-		View view = initUI(inflater);
+        tv_version = (TextView) currentView.findViewById(R.id.tv_version);
 
-		// Get the firmware version number
-		GetFirmwareVersion();
-		// Get temperature
-		GetTemperature();
-		// Get power
-		GetPower();
-		// Set region
-		SetRegion();
-		// Get region
-		GetRegion();
+        btn_readpower = (Button) currentView.findViewById(R.id.bt_readpower);
+        btn_readpower.setOnClickListener(new MyClickListener());
 
-		return view;
-	}
+        btn_writepower = (Button) currentView.findViewById(R.id.bt_writepower);
+        btn_writepower.setOnClickListener(new MyClickListener());
 
-	private View initUI(LayoutInflater inflater) {
-		currentView = inflater.inflate(R.layout.fragment_settings, null);
-		currentView.setFocusable(true);
+        btn_readregion = (Button) currentView.findViewById(R.id.bt_getregion);
+        btn_readregion.setOnClickListener(new MyClickListener());
 
-		et_power = (EditText) currentView.findViewById(R.id.et_power);
-		et_region = (EditText) currentView.findViewById(R.id.et_region);
-		et_temp = (EditText) currentView.findViewById(R.id.et_temperature);
+        btn_readtemp = (Button) currentView.findViewById(R.id.bt_gettemperature);
+        btn_readtemp.setOnClickListener(new MyClickListener());
 
-		tv_version = (TextView) currentView.findViewById(R.id.tv_version);
+        return currentView;
+    }
 
-		btn_readpower = (Button) currentView.findViewById(R.id.bt_readpower);
-		btn_readpower.setOnClickListener(new MyClickListener());
+    //  Get the firmware version number
+    public void GetFirmwareVersion() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        String version = mDevice.getFirmwareVersion();// .trim();
+        if (version == null || version == "") {
+            return;
+        }
+        tv_version.setText(version.trim());
+        System.out.println(version);
+    }
 
-		btn_writepower = (Button) currentView.findViewById(R.id.bt_writepower);
-		btn_writepower.setOnClickListener(new MyClickListener());
+    // Get temperature
+    public void GetTemperature() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        String temperature = mDevice.getTemperature();
+        if (temperature == null || temperature == "") {
+            System.out.println(getString(R.string.RfidGetTemperature_faild));
+            return;
+        }
+        et_temp.setText(temperature);
+        System.out.println(getString(R.string.temperature) + temperature);
+    }
 
-		btn_readregion = (Button) currentView.findViewById(R.id.bt_getregion);
-		btn_readregion.setOnClickListener(new MyClickListener());
+    // Get power
+    public void GetPower() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        int power = mDevice.getPower();
+        if (power == 0) {
+            System.out.println(getString(R.string.RfidGetPower_faild));
+        }
+        et_power.setText(power + "");
+        System.out.println(getString(R.string.power) + power);
+    }
 
-		btn_readtemp = (Button) currentView.findViewById(R.id.bt_gettemperature);
-		btn_readtemp.setOnClickListener(new MyClickListener());
+    // Set power
+    public void SetPower() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        String value = et_power.getText().toString().trim();
+        if (!value.isEmpty()) {
+            int power = Integer.valueOf(value);
+            System.out.println(getString(R.string.RfidSetPower) + power);
+            boolean ret = mDevice.setPower(power);
+            Log.i("zy", "SetPower=" + ret);
+            if (!ret) {
+                System.out.println(getString(R.string.RfidGetPower_faild));
+            }
+        } else {
+            Toast.makeText(getActivity(), R.string.please_input_power, Toast.LENGTH_SHORT).show();
+        }
 
-		return currentView;
-	}
+    }
 
-	private class MyClickListener implements OnClickListener {
-		public void onClick(View v) {
-			switch (v.getId()) {
-			case R.id.bt_readpower:
-				GetPower();
-				break;
-			case R.id.bt_writepower:
-				SetPower();
-				break;
-			case R.id.bt_getregion:
-				GetRegion();
-				break;
-			case R.id.bt_gettemperature:
-				GetTemperature();
-				break;
-			default:
-				break;
-			}
-		}
-	}
+    // Get region
+    public void GetRegion() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        String region = mDevice.getRegion();
+        if (region == null) {
+            System.out.println(getString(R.string.RfidGetRegion_faild));
+            return;
+        }
 
-	//  Get the firmware version number
-	public void GetFirmwareVersion() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		String version = mDevice.getFirmwareVersion();// .trim();
-		if (version == null || version == "") {
-			return;
-		}
-		tv_version.setText(version.trim());
-		System.out.println(version);
-	}
+        et_region.setText(region);
+        System.out.println(getString(R.string.region) + region);
+    }
 
-	// Get temperature
-	public void GetTemperature() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		String temperature = mDevice.getTemperature();
-		if (temperature == null || temperature == "") {
-			System.out.println(getString(R.string.RfidGetTemperature_faild));
-			return;
-		}
-		et_temp.setText(temperature);
-		System.out.println(getString(R.string.temperature) + temperature);
-	}
+    // Set region
+    public void SetRegion() {
+        if (!mDevice.isopen()) {
+            mDevice.open();
+        }
+        String region = getString(R.string.fcc);
+        boolean ret = mDevice.setRegion(region);
+        if (!ret) {
+            System.out.println(getString(R.string.RfidGetRegion_faild));
+        }
+    }
 
-	// Get power
-	public void GetPower() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		int power = mDevice.getPower();
-		if (power == 0) {
-			System.out.println(getString(R.string.RfidGetPower_faild));
-		}
-		et_power.setText(power + "");
-		System.out.println(getString(R.string.power) + power);
-	}
-
-	// Set power
-	public void SetPower() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		String value = et_power.getText().toString().trim();
-		if (!value.isEmpty()) {
-			int power = Integer.valueOf(value);
-			System.out.println(getString(R.string.RfidSetPower) + power);
-			boolean ret = mDevice.setPower(power);
-			Log.i("zy","SetPower="+ret);
-			if (!ret) {
-				System.out.println(getString(R.string.RfidGetPower_faild));
-			}
-		} else {
-			Toast.makeText(getActivity(), R.string.please_input_power, Toast.LENGTH_SHORT).show();
-		}
-
-	}
-
-	// Get region
-	public void GetRegion() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		String region = mDevice.getRegion();
-		if (region == null) {
-			System.out.println(getString(R.string.RfidGetRegion_faild));
-			return;
-		}
-
-		et_region.setText(region);
-		System.out.println(getString(R.string.region) + region);
-	}
-
-	// Set region
-	public void SetRegion() {
-		if(!mDevice.isopen()){
-			mDevice.open();
-		}
-		String region = getString(R.string.fcc);
-		boolean ret = mDevice.setRegion(region);
-		if (!ret) {
-			System.out.println(getString(R.string.RfidGetRegion_faild));
-		}
-	}
+    private class MyClickListener implements OnClickListener {
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.bt_readpower:
+                    GetPower();
+                    break;
+                case R.id.bt_writepower:
+                    SetPower();
+                    break;
+                case R.id.bt_getregion:
+                    GetRegion();
+                    break;
+                case R.id.bt_gettemperature:
+                    GetTemperature();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
 }

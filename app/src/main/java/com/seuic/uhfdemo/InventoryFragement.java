@@ -34,46 +34,32 @@ public class InventoryFragement extends Fragment {
     public static final int MAX_LEN = 128;
 
     public static final int ItemSelectColor = 0x44000000;
-
+    static int m_count = 0;
+    private static InventoryFragement inventoryfragement;
+    // sound
+    private static SoundPool mSoundPool;
+    private static int soundID;
+    public boolean mInventoryStart = false;
+    View currentView;
     private UHFService mDevice;
     private InventoryRunable mInventoryRunable;
-    public boolean mInventoryStart = false;
     private Thread mInventoryThread;
-
     private int mSelectedIndex = -1;
-
     private Button btn_once;
     private Button btn_continue;
     private Button btn_stop;
-
     private TextView tv_total;
     private ListView lv_id;
-
     private EditText et_bank;
     private EditText et_address;
     private EditText et_lenth;
     private EditText et_password;
-
     private Button btn_read;
     private Button btn_write;
     private Button btn_clear;
-
     private EditText et_data;
-
     private List<EPC> mEPCList;
     private InventoryAdapter mAdapter;
-
-    View currentView;
-
-    static int m_count = 0;
-
-    private static InventoryFragement inventoryfragement;
-
-    public static InventoryFragement getInstance() {
-        if (inventoryfragement == null) inventoryfragement = new InventoryFragement();
-        return inventoryfragement;
-    }
-
     private Handler handler = new Handler() {
 
         public void handleMessage(Message msg) {
@@ -82,9 +68,9 @@ public class InventoryFragement extends Fragment {
                 case 1:
                     synchronized (currentView.getContext()) {
                         synchronized (currentView.getContext()) {
-                            int count=mEPCList.size();
+                            int count = mEPCList.size();
                             mEPCList = mDevice.getTagIDs();
-                            if (count<mEPCList.size())
+                            if (count < mEPCList.size())
                                 playSound();
                         }
                         refreshData();
@@ -107,32 +93,6 @@ public class InventoryFragement extends Fragment {
 
         ;
     };
-
-    // sound
-    private static SoundPool mSoundPool;
-    private static int soundID;
-    /*
-     * static { mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 20);
-     * soundID = mSoundPool.load(getContext(),R.raw.scan, 1); }
-     */
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        mDevice = UHFService.getInstance(getActivity().getApplication());
-
-        View view = initUI(inflater);
-
-        mEPCList = new ArrayList<EPC>();
-        mAdapter = new InventoryAdapter();
-        mInventoryRunable = new InventoryRunable();
-        lv_id.setAdapter(mAdapter);
-
-        lv_id.setOnItemClickListener(new MyItemClickListener());
-        return view;
-    }
-
-    private ScanKeyService mScanKeyService = ScanKeyService.getInstance();
-    private String TAG = "zy";
     private IKeyEventCallback mCallback = new IKeyEventCallback.Stub() {
         @Override
         public void onKeyDown(int keyCode) throws RemoteException {
@@ -153,11 +113,37 @@ public class InventoryFragement extends Fragment {
 			handler.sendMessage(message);*/
         }
     };
+    /*
+     * static { mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 20);
+     * soundID = mSoundPool.load(getContext(),R.raw.scan, 1); }
+     */
+    private ScanKeyService mScanKeyService = ScanKeyService.getInstance();
+    private String TAG = "zy";
+
+    public static InventoryFragement getInstance() {
+        if (inventoryfragement == null) inventoryfragement = new InventoryFragement();
+        return inventoryfragement;
+    }
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        mDevice = UHFService.getInstance(getActivity().getApplication());
+
+        View view = initUI(inflater);
+
+        mEPCList = new ArrayList<EPC>();
+        mAdapter = new InventoryAdapter();
+        mInventoryRunable = new InventoryRunable();
+        lv_id.setAdapter(mAdapter);
+
+        lv_id.setOnItemClickListener(new MyItemClickListener());
+        return view;
+    }
 
     @Override
     public void onResume() {
         mDevice.open();
-        Log.i("getFirmwareVersion",mDevice.getFirmwareVersion()) ;
+        Log.i("getFirmwareVersion", mDevice.getFirmwareVersion());
         mScanKeyService.registerCallback(mCallback, "248,249,250");
         super.onResume();
     }
@@ -226,58 +212,12 @@ public class InventoryFragement extends Fragment {
             for (EPC item : mEPCList) {
                 count += item.count;
             }
-			if (count > m_count) {
-				//playSound();
-			}
+            if (count > m_count) {
+                //playSound();
+            }
             mAdapter.notifyDataSetChanged();
             tv_total.setText(getString(R.string.id_pc_epc) + getString(R.string.total) + mEPCList.size());
             m_count = count;
-        }
-    }
-
-
-    // EPC list item listener
-    private class MyItemClickListener implements OnItemClickListener {
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            mSelectedIndex = position;
-            mAdapter.notifyDataSetInvalidated();
-            /*
-             * ListView listview = (ListView) parent; HashMap<String, Object>
-             * data = (HashMap<String, Object>)
-             * listview.getItemAtPosition(position); String epc =
-             * data.get("epc").toString(); Toast.makeText(getActivity(), epc,
-             * 0).show();
-             */
-        }
-    }
-
-    // Button click event
-    private class MyClickListener implements android.view.View.OnClickListener {
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.bt_once:
-                    mDevice.open();
-                    BtnOnce();
-                    break;
-                case R.id.bt_continue:
-                    BtnContinue();
-                    break;
-                case R.id.bt_stop:
-                    BtnStop();
-                    break;
-                case R.id.bt_read:
-                    BtnRead();
-                    break;
-                case R.id.bt_write:
-                    BtnWrite();
-                    break;
-                case R.id.bt_clear:
-                    BtnClear();
-                    break;
-                default:
-                    break;
-            }
         }
     }
 
@@ -392,7 +332,6 @@ public class InventoryFragement extends Fragment {
         }
     }
 
-
     public boolean readTagOnce(String epcID, String psw, String bank, String offset, String len, byte[] data) {
         Log.d("UHFLogic", "readTagData times:111");
         boolean result = false;
@@ -409,7 +348,6 @@ public class InventoryFragement extends Fragment {
         }
 
     }
-
 
     private void BtnWrite() {
         if (mSelectedIndex >= 0) {
@@ -461,6 +399,51 @@ public class InventoryFragement extends Fragment {
             soundID = mSoundPool.load(currentView.getContext(), R.raw.scan, 1);// "/system/media/audio/notifications/Antimony.ogg"
         }
         mSoundPool.play(soundID, 1, 1, 0, 0, 1);
+    }
+
+    // EPC list item listener
+    private class MyItemClickListener implements OnItemClickListener {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            mSelectedIndex = position;
+            mAdapter.notifyDataSetInvalidated();
+            /*
+             * ListView listview = (ListView) parent; HashMap<String, Object>
+             * data = (HashMap<String, Object>)
+             * listview.getItemAtPosition(position); String epc =
+             * data.get("epc").toString(); Toast.makeText(getActivity(), epc,
+             * 0).show();
+             */
+        }
+    }
+
+    // Button click event
+    private class MyClickListener implements android.view.View.OnClickListener {
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.bt_once:
+                    mDevice.open();
+                    BtnOnce();
+                    break;
+                case R.id.bt_continue:
+                    BtnContinue();
+                    break;
+                case R.id.bt_stop:
+                    BtnStop();
+                    break;
+                case R.id.bt_read:
+                    BtnRead();
+                    break;
+                case R.id.bt_write:
+                    BtnWrite();
+                    break;
+                case R.id.bt_clear:
+                    BtnClear();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     private class InventoryAdapter extends BaseAdapter {
@@ -526,7 +509,7 @@ public class InventoryFragement extends Fragment {
                 Log.d("mInventoryMsg", "--------------");
                 List<EPC> x = mDevice.getTagIDs();
                 Log.d("mInventoryMsg", "size: " + x.size());
-                for (int i = 0 ; i < x.size(); i++){
+                for (int i = 0; i < x.size(); i++) {
                     Log.d("mInventoryMsg", x.get(i).getId());
                 }
                 try {
