@@ -28,6 +28,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.seuic.uhfdemo.R;
+
 public class InventoryFragement extends Fragment {
     public static final int MAX_LEN = 128;
 

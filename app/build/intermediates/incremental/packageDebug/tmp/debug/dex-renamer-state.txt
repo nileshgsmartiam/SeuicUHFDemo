@@ -1,4 +1,4 @@
-#Mon Sep 25 16:07:07 IST 2023
-base.0=/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Mon Sep 25 17:42:13 IST 2023
+base.0=/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
