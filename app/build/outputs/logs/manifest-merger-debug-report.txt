@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-33:12
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:2:1-34:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/komal/.gradle/caches/transforms-3/137aeebca9c114ec825afb22472377a8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/komal/.gradle/caches/transforms-3/69a1b901bee1ed183c08c10fbe313f3d/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/komal/.gradle/caches/transforms-3/edd371eb5d60161107edfe73e4df8a0e/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -21,6 +21,7 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] /home/komal/.gradle/caches/tran
 MERGED from [androidx.customview:customview:1.0.0] /home/komal/.gradle/caches/transforms-3/96ca08250f557b7fda40ea7412b4995d/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.core:core-ktx:1.12.0] /home/komal/.gradle/caches/transforms-3/287eec49aee0b3efc08f1537ba1463c1/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.multidex:multidex:2.0.1] /home/komal/.gradle/caches/transforms-3/1917ad721f7a540063d27c4791fba5ae/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] /home/komal/.gradle/caches/transforms-3/f2122fb9805e00735d245a78dade7b10/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/komal/.gradle/caches/transforms-3/94754352634c0be4d8f426b9d10af170/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/komal/.gradle/caches/transforms-3/70dbf55d39540a079b578c0e01499021/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -57,8 +58,8 @@ ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/
 	android:name
 		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:9:22-75
 application
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-31:19
-INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-31:19
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-32:19
+INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-32:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/komal/.gradle/caches/transforms-3/137aeebca9c114ec825afb22472377a8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/komal/.gradle/caches/transforms-3/137aeebca9c114ec825afb22472377a8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
@@ -76,39 +77,41 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/komal
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:16:9-41
 	android:icon
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:14:9-45
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:15:9-45
 	android:allowBackup
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:16:9-40
-uses-library#com.seuic.uhf
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:9-79
-	android:required
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:52-76
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:17:9-40
 	android:name
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:23-51
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:13:9-61
+uses-library#com.seuic.uhf
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:9-79
+	android:required
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:52-76
+	android:name
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:23-51
 activity#com.seuic.uhfdemo.MainActivity
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:20:9-30:20
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:9-31:20
 	android:label
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-45
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-45
 	android:windowSoftInputMode
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-52
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:25:13-52
 	android:exported
 		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:13-41
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:25:13-29:29
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:28:17-77
+ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:28:27-74
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:29:27-74
 uses-sdk
 INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml
@@ -147,6 +150,8 @@ MERGED from [androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/
 MERGED from [androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.12.0] /home/komal/.gradle/caches/transforms-3/287eec49aee0b3efc08f1537ba1463c1/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.12.0] /home/komal/.gradle/caches/transforms-3/287eec49aee0b3efc08f1537ba1463c1/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.1] /home/komal/.gradle/caches/transforms-3/1917ad721f7a540063d27c4791fba5ae/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] /home/komal/.gradle/caches/transforms-3/1917ad721f7a540063d27c4791fba5ae/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [androidx.savedstate:savedstate:1.2.0] /home/komal/.gradle/caches/transforms-3/f2122fb9805e00735d245a78dade7b10/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.2.0] /home/komal/.gradle/caches/transforms-3/f2122fb9805e00735d245a78dade7b10/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/komal/.gradle/caches/transforms-3/94754352634c0be4d8f426b9d10af170/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44

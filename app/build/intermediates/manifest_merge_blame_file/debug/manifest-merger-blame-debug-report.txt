@@ -27,70 +27,72 @@
 18-->[androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-31:19
-21        android:allowBackup="true"
-21-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:13:9-35
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-23        android:debuggable="true"
-24        android:extractNativeLibs="true"
-25        android:icon="@drawable/ic_launcher"
-25-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:14:9-45
-26        android:label="@string/app_name"
-26-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:15:9-41
-27        android:testOnly="true"
-28        android:theme="@style/AppTheme" >
-28-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:16:9-40
-29        <uses-library
-29-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:9-79
-30            android:name="com.seuic.uhf"
-30-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:23-51
-31            android:required="false" />
-31-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:18:52-76
-32
-33        <activity
-33-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:20:9-30:20
-34            android:name="com.seuic.uhfdemo.MainActivity"
-34-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:13-41
-35            android:exported="true"
-35-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-36
-36            android:label="@string/app_name"
-36-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-45
-37            android:windowSoftInputMode="adjustPan" >
-37-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-52
-38            <intent-filter>
-38-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:25:13-29:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:17-69
-39-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:28:17-77
-41-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:28:27-74
-42            </intent-filter>
-43        </activity>
-44
-45        <provider
-45-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-46            android:name="androidx.startup.InitializationProvider"
-46-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-47            android:authorities="com.seuic.uhfdemo.androidx-startup"
-47-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-48            android:exported="false" >
-48-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-49            <meta-data
-49-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-50-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-51                android:value="androidx.startup" />
-51-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-52            <meta-data
-52-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-53-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-54                android:value="androidx.startup" />
-54-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-55        </provider>
-56    </application>
-57
-58</manifest>
+20-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:12:5-32:19
+21        android:name="androidx.multidex.MultiDexApplication"
+21-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:13:9-61
+22        android:allowBackup="true"
+22-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:14:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.12.0] /home/komal/.gradle/caches/transforms-3/a1ed38efd2717beb4f0ce9cd71399044/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@drawable/ic_launcher"
+26-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:15:9-45
+27        android:label="@string/app_name"
+27-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:16:9-41
+28        android:testOnly="true"
+29        android:theme="@style/AppTheme" >
+29-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:17:9-40
+30        <uses-library
+30-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:9-79
+31            android:name="com.seuic.uhf"
+31-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:23-51
+32            android:required="false" />
+32-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:19:52-76
+33
+34        <activity
+34-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:9-31:20
+35            android:name="com.seuic.uhfdemo.MainActivity"
+35-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-41
+36            android:exported="true"
+36-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-36
+37            android:label="@string/app_name"
+37-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-45
+38            android:windowSoftInputMode="adjustPan" >
+38-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:25:13-52
+39            <intent-filter>
+39-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:26:13-30:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:27:17-69
+40-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:27:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:29:17-77
+42-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:29:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <provider
+46-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+47            android:name="androidx.startup.InitializationProvider"
+47-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+48            android:authorities="com.seuic.uhfdemo.androidx-startup"
+48-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+49            android:exported="false" >
+49-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+50            <meta-data
+50-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+51-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+52                android:value="androidx.startup" />
+52-->[androidx.emoji2:emoji2:1.2.0] /home/komal/.gradle/caches/transforms-3/03d90460fae733aac8909ca9f1ed4acc/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+53            <meta-data
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+55                android:value="androidx.startup" />
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/komal/.gradle/caches/transforms-3/f8586e5e027470f26d11a126b40214dc/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+56        </provider>
+57    </application>
+58
+59</manifest>
