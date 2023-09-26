@@ -53,11 +53,11 @@
 34            android:name="com.seuic.uhfdemo.MainActivity"
 34-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:13-41
 35            android:exported="true"
-35-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-36
+35-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-36
 36            android:label="@string/app_name"
 36-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-45
 37            android:windowSoftInputMode="adjustPan" >
-37-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-52
+37-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-52
 38            <intent-filter>
 38-->/home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:25:13-29:29
 39                <action android:name="android.intent.action.MAIN" />

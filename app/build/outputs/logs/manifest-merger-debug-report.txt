@@ -94,9 +94,9 @@ ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/
 	android:label
 		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:22:13-45
 	android:windowSoftInputMode
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-52
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-52
 	android:exported
-		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:24:13-36
+		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:23:13-36
 	android:name
 		ADDED from /home/komal/Development/Other/docs for seuic/new/A9U SDK/UHFDemo/app/src/main/AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
